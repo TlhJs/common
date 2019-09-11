@@ -3,6 +3,7 @@
         <cube-button :active="true" @click="permission">权限控制</cube-button>
         <cube-button :active="true" @click="timeFormat">时间戳转换</cube-button>
         <cube-button :active="true" @click="cart">购物车</cube-button>
+        <cube-button :active="true" @click="comAdd">组件动态添加</cube-button>
     </div>
 </template>
 
@@ -21,6 +22,9 @@ export default {
         },
         cart() {
             this.$router.push({ name: 'Cart' });
+        },
+        comAdd() {
+            this.$router.push({ name: 'ComAdd' });
         }
     }
 };

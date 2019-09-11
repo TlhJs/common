@@ -30,6 +30,11 @@ export default new Router({
             component: () => import('./views/cart.vue')
         },
         {
+            path: '/ComAdd',
+            name: 'ComAdd',
+            component: () => import('./views/comAdd.vue')
+        },
+        {
             path: '*',
             redirect: '/'
         }
