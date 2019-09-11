@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, p, dl, dt, dd, button, h1, h2, h3, h4, h5, h6, ul, li, ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li, ol {
+  list-style: none;
+}
+button, textarea, input {
+  border: 0;
+}
+
+button, textarea {
+  background-color: transparent;
+}
+
+/*取消chrome下input和textarea的聚焦边框：*/
+input, button, select, textarea {
+  outline: none
+}
+
+/*a 标签按下蓝色*/
+a, a:hover, a:active, a:visited, a:link, a:focus {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+
+html, body {
+  user-select: none;
+  /*移动端点击黑色阴影*/
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1;
+  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
+  width: 100%;
+  height: 100%;
+  //overflow: hidden;
+  touch-action: none;
+  position: relative;
+  background-color: transparent;
+}
