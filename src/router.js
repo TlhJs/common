@@ -35,6 +35,11 @@ export default new Router({
             component: () => import('./views/comAdd.vue')
         },
         {
+            path: '/TimePeriod',
+            name: 'TimePeriod',
+            component: () => import('./views/timePeriod.vue')
+        },
+        {
             path: '*',
             redirect: '/'
         }

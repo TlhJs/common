@@ -1,4 +1,9 @@
-export function formatDate(date, fmt) {
+function padLeftZero(str) {
+    return (`00${str}`).substr(str.length);
+}
+
+// eslint-disable-next-line
+export function formatDate(date, fmt) { 
     if (/(y+)/.test(fmt)) {
         fmt = fmt.replace(RegExp.$1, (`${date.getFullYear()}`).substr(4 - RegExp.$1.length));
     }
@@ -9,6 +14,7 @@ export function formatDate(date, fmt) {
         'm+': date.getMinutes(),
         's+': date.getSeconds()
     };
+    // eslint-disable-next-line
     for (const k in o) {
         if (new RegExp(`(${k})`).test(fmt)) {
             const str = `${o[k]}`;
@@ -16,8 +22,4 @@ export function formatDate(date, fmt) {
         }
     }
     return fmt;
-}
-
-function padLeftZero(str) {
-    return (`00${str}`).substr(str.length);
 }

@@ -1,10 +1,11 @@
-import Vue from 'vue'
-import './cube-ui'
+import Vue from 'vue';
+import './cube-ui';
 import FastClick from 'fastclick';
 import App from './App.vue';
 import router from './router';
 import store from './store';
 import './common/scss/index.scss';
+import './common/js/common';
 
 // 移动端移动点击延时
 document.addEventListener('DOMContentLoaded', () => {

@@ -1,9 +1,10 @@
 <template>
     <div class="home">
-        <cube-button :active="true" @click="permission">权限控制</cube-button>
-        <cube-button :active="true" @click="timeFormat">时间戳转换</cube-button>
-        <cube-button :active="true" @click="cart">购物车</cube-button>
-        <cube-button :active="true" @click="comAdd">组件动态添加</cube-button>
+        <cube-button  @click="permission">权限控制</cube-button>
+        <cube-button  @click="timeFormat">时间戳转换</cube-button>
+        <cube-button  @click="cart">购物车</cube-button>
+        <cube-button  @click="comAdd">组件动态添加</cube-button>
+        <cube-button  @click="time">时间起止</cube-button>
     </div>
 </template>
 
@@ -25,6 +26,9 @@ export default {
         },
         comAdd() {
             this.$router.push({ name: 'ComAdd' });
+        },
+        time() {
+            this.$router.push({ name: 'TimePeriod' });
         }
     }
 };
