@@ -1,6 +1,7 @@
 <template>
     <section>
-        <div>{{1560545941000 | TimeFormat}}</div>
+        <div>输入时间戳为：1560545941000</div>
+        <div>转化为：{{1560545941000 | TimeFormat}}</div>
     </section>
 </template>
 <script>

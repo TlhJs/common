@@ -13,6 +13,8 @@ export default new Router({
         {
             path: '/',
             component: Home,
+            // component: () => import('./views/robot.vue'),
+            // component: () => import('./views/sendMessage.vue'),
         },
         {
             path: '/Permission',
@@ -38,6 +40,16 @@ export default new Router({
             path: '/TimePeriod',
             name: 'TimePeriod',
             component: () => import('./views/timePeriod.vue')
+        },
+        {
+            path: '/PullSel',
+            name: 'PullSel',
+            component: () => import('./views/pullSel.vue')
+        },
+        {
+            path: '/Robot',
+            name: 'Robot',
+            component: () => import('./views/robot.vue')
         },
         {
             path: '*',

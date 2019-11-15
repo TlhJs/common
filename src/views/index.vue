@@ -5,6 +5,8 @@
         <cube-button  @click="cart">购物车</cube-button>
         <cube-button  @click="comAdd">组件动态添加</cube-button>
         <cube-button  @click="time">时间起止</cube-button>
+        <cube-button  @click="pullSel">下拉选择</cube-button>
+        <cube-button  @click="robot">图灵机器人</cube-button>
     </div>
 </template>
 
@@ -29,6 +31,12 @@ export default {
         },
         time() {
             this.$router.push({ name: 'TimePeriod' });
+        },
+        pullSel() {
+            this.$router.push({ name: 'PullSel' });
+        },
+        robot() {
+            this.$router.push({ name: 'Robot' });
         }
     }
 };
