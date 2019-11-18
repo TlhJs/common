@@ -5,7 +5,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import './common/scss/index.scss';
-import './common/js/common';
+import './common/js/WinUtil';
 
 // 移动端移动点击延时
 document.addEventListener('DOMContentLoaded', () => {
