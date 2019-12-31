@@ -24,7 +24,8 @@ export default {
         // 显示 时间插件
         showDatePicker(type) {
             this.timeType = type;
-            const d = window.timeFormat().split('-');
+            const d = window.timeFormat3({ date: true }).split('-');
+            // 第一次点击
             if (!this.datePicker) {
                 this.datePicker = this.$createDatePicker({
                     title: '时间',
@@ -40,10 +41,12 @@ export default {
                     },
                     onSelect: this.selectHandle,
                 });
+            // 再次点击
             } else {
                 let maxArr = new Date(+d[0] + 2, +d[1] - 1, +d[2]);
                 let minArr = new Date(+d[0] - 2, +d[1] - 1, +d[2]);
                 if (this.timeType === 'BeDate') {
+                    // 再次选择开始时间的时候限制开始时间不大于结束时间
                     if (this.searchTime.BeDate !== undefined && this.searchTime.EndDate !== '') {
                         const ctime = this.searchTime.EndDate.split(' ');
                         const ctime1 = ctime[0];
@@ -52,6 +55,7 @@ export default {
                         // const btime2 = ctime2.split(':');
                         maxArr = new Date(+btime1[0], +btime1[1] - 1, +btime1[2]);
                     }
+                    // 再次选择开始时间时显示到上次所选择的位置
                     this.datePicker.$updateProps({
                         min: minArr,
                         max: maxArr,
@@ -59,6 +63,7 @@ export default {
                         value: window.timeFormat3({ time: this.searchTime.BeDate, date: true, dateObj: true }),
                     });
                 } else if (this.timeType === 'EndDate') {
+                    // 再次选择结束时间的时候限制结束时间不小于开始时间
                     if (this.searchTime.EndDate !== undefined && this.searchTime.BeDate !== '') {
                         const ctime = this.searchTime.BeDate.split(' ');
                         const ctime1 = ctime[0];
@@ -67,6 +72,7 @@ export default {
                         // const btime2 = ctime2.split(':');
                         minArr = new Date(+btime1[0], +btime1[1] - 1, +btime1[2]);
                     }
+                    // 再次选择结束时间时显示到上次所选择的位置
                     this.datePicker.$updateProps({
                         min: minArr,
                         max: maxArr,

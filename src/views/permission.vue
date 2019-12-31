@@ -25,7 +25,7 @@ export default {
                 name: '超级管理员', perData: [2]
             }],
             test2: [],
-            perList: ['admin', 'superAdmin'] // 权限列表
+            perList: ['admin', 'superAdmin'] // 权限列表(可通过接口请求)
         };
     },
     mounted() {

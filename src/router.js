@@ -13,8 +13,8 @@ export default new Router({
         {
             path: '/',
             component: Home,
-            // component: () => import('./views/robot.vue'),
-            // component: () => import('./views/sendMessage.vue'),
+            // component: () => import('./views/header.vue'),
+            // component: () => import('./views/style.vue'),
         },
         {
             path: '/Permission',
@@ -50,6 +50,21 @@ export default new Router({
             path: '/Robot',
             name: 'Robot',
             component: () => import('./views/robot.vue')
+        },
+        {
+            path: '/Tab',
+            name: 'Tab',
+            component: () => import('./views/tab.vue')
+        },
+        {
+            path: '/Input',
+            name: 'Input',
+            component: () => import('./views/input.vue')
+        },
+        {
+            path: '/Style',
+            name: 'Style',
+            component: () => import('./views/style.vue')
         },
         {
             path: '*',

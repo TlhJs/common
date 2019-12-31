@@ -7,6 +7,9 @@
         <cube-button  @click="time">时间起止</cube-button>
         <cube-button  @click="pullSel">下拉选择</cube-button>
         <cube-button  @click="robot">图灵机器人</cube-button>
+        <cube-button  @click="tab">选择tab</cube-button>
+        <cube-button  @click="input">输入组件</cube-button>
+        <cube-button  @click="style">边框样式</cube-button>
     </div>
 </template>
 
@@ -37,6 +40,15 @@ export default {
         },
         robot() {
             this.$router.push({ name: 'Robot' });
+        },
+        tab() {
+            this.$router.push({ name: 'Tab' });
+        },
+        input() {
+            this.$router.push({ name: 'Input' });
+        },
+        style() {
+            this.$router.push({ name: 'Style' });
         }
     }
 };
