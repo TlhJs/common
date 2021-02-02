@@ -22,5 +22,6 @@ export default ({ arr = [], arr2 }) => {
     // 过滤确保显示模块(如arr=[0],则过滤之后的length为0,返回false故不显示用户权限)
     const isShow = posData.filter(el => arr.indexOf(el) > -1).length > 0;
     // console.log(isShow);
+    // console.log(posData.filter(el => arr.indexOf(el) > -1)) 输出为[1,2] [] [1] [2]
     return isShow;
 };

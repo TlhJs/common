@@ -24,6 +24,15 @@ export default {
             }, {
                 name: '超级管理员', perData: [2]
             }],
+            test1: [{
+                name: '普通权限', perData: ['user', 'admin', 'superAdmin']
+            }, {
+                name: '用户权限', perData: ['user']
+            }, {
+                name: '管理员', perData: ['admin']
+            }, {
+                name: '超级管理员', perData: ['superAdmin']
+            }],
             test2: [],
             perList: ['admin', 'superAdmin'] // 权限列表(可通过接口请求)
         };
@@ -33,10 +42,18 @@ export default {
     },
     methods: {
         init() {
-            this.test2 = this.test.filter(el => permissionData({
-                arr: el.perData,
-                arr2: this.perList
-            }) === true);
+            // 方法一
+            // this.test2 = this.test.filter(el => permissionData({
+            //     arr: el.perData,
+            //     arr2: this.perList
+            // }) === true);
+            // 方法二
+            this.test1.forEach((el) => {
+                if (this.perList.filter(e => el.perData.indexOf(e) > -1).length > 0) {
+                    console.log(el);
+                    this.test2.push(el);
+                }
+            });
         }
 
     }
