@@ -6,7 +6,14 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-    state: {},
-    mutations: {},
+    state: {
+        list: []
+    },
+    mutations: {
+        orderList(s, d) {
+            s.list = d;
+            // window.localStorage.setItem("list",JSON.stringify(s.orderList))
+        },
+    },
     actions: {}
 });

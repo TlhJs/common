@@ -67,6 +67,26 @@ export default new Router({
             component: () => import('./views/style.vue')
         },
         {
+            path: '/Test',
+            name: 'Test',
+            component: () => import('./views/test.vue')
+        },
+        {
+            path: '/Froala',
+            name: 'Froala',
+            component: () => import('./views/froala.vue'),
+        },
+        {
+            path: '/Write',
+            name: 'Write',
+            component: () => import('./views/writehand.vue'),
+        },
+        {
+            path: '/Agenda',
+            name: 'Agenda',
+            component: () => import('./views/agenda.vue'),
+        },
+        {
             path: '*',
             redirect: '/'
         }

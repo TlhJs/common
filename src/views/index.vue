@@ -10,6 +10,10 @@
         <cube-button  @click="tab">选择tab</cube-button>
         <cube-button  @click="input">输入组件</cube-button>
         <cube-button  @click="style">边框样式</cube-button>
+        <cube-button  @click="test">测测测</cube-button>
+        <cube-button  @click="froala">富文本编辑框</cube-button>
+        <cube-button  @click="write">电子签名</cube-button>
+        <cube-button  @click="agneda">日历</cube-button>
     </div>
 </template>
 
@@ -49,6 +53,18 @@ export default {
         },
         style() {
             this.$router.push({ name: 'Style' });
+        },
+        test() {
+            this.$router.push({ name: 'Test' });
+        },
+        froala() {
+            this.$router.push({ name: 'Froala' });
+        },
+        write() {
+            this.$router.push({ name: 'Write' });
+        },
+        agneda() {
+            this.$router.push({ name: 'Agenda' });
         }
     }
 };
